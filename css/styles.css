@@ -106,7 +106,6 @@ main {
 }
 
 img {
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -1918,6 +1917,10 @@ input[type=radio] {
 }
 
 @media screen and (min-width: 0 \0) {
+  img {
+    width: 100%;
+  }
+
   .tab__title {
     transform: translate(0, -103%);
   }
