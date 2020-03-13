@@ -117,8 +117,8 @@ img {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-regular.woff2') format('woff2'),  url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-regular.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-regular.woff2') format('woff2');
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 /* open-sans-600 - cyrillic_latin_cyrillic-ext_latin-ext */
@@ -128,8 +128,8 @@ img {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-600.woff2') format('woff2'),  url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-600.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-600.woff2') format('woff2');
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 /* open-sans-700 - cyrillic_latin_cyrillic-ext_latin-ext */
@@ -139,8 +139,8 @@ img {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-700.woff2') format('woff2'),  url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-700.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-700.woff2') format('woff2');
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 /* open-sans-800 - cyrillic_latin_cyrillic-ext_latin-ext */
@@ -150,8 +150,8 @@ img {
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-800.woff2') format('woff2'),  url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-800.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url('../fonts/open-sans-v17-cyrillic_latin_cyrillic-ext_latin-ext-800.woff2') format('woff2');
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 html {
@@ -343,30 +343,35 @@ a {
   color: #2560B9;
 }
 
-h2.h2 {
+h2,
+.h2 {
   font-size: 3.4rem;
 }
 
-h3.h3 {
+h3,
+.h3 {
   font-size: 2.6rem;
   font-family: Arial;
   font-weight: 700;
   color: #FFFFFF;
 }
 
-h4.h4 {
+h4,
+.h4 {
   font-size: 2.4rem;
   font-weight: 600;
   color: #545252;
 }
 
-h5.h5 {
+h5,
+.h5 {
   font-size: 1.8rem;
   font-weight: 600;
   color: #FFFFFF;
 }
 
-h6.h6 {
+h6,
+.h6 {
   font-size: 13px;
   font-weight: 600;
   color: #545252;
@@ -698,7 +703,7 @@ body.compensate-for-scrollbar {
   white-space: nowrap;
 }
 
-.nav-main-list a {
+.nav-main-list li {
   display: inline-block;
   flex: 1 1 auto;
   height: 100%;
@@ -709,17 +714,20 @@ body.compensate-for-scrollbar {
   transition: 0.15s ease-in-out;
 }
 
-.nav-main-list a:hover {
+.nav-main-list li:hover {
   background: #0A5F9A;
+}
+
+.nav-main-list li:hover a {
   color: #FFFFFF;
 }
 
-.nav-main-list a:first-child {
+.nav-main-list li:first-child {
   border-left: 1px solid #D9D9D9;
   border-radius: 20px 0 0 20px;
 }
 
-.nav-main-list a:last-child {
+.nav-main-list li:last-child {
   border-radius: 0 20px 20px 0;
 }
 
@@ -1047,7 +1055,7 @@ body.compensate-for-scrollbar {
 }
 
 .map {
-  max-width: 1139px;
+  max-width: 1140px;
   height: 431px;
 }
 
@@ -1944,7 +1952,8 @@ input[type=radio] {
 }
 
 @media screen and (max-width: 1200px) {
-  h6.h6 {
+  h6,
+  .h6 {
     font-size: 16px;
   }
 
@@ -2039,16 +2048,16 @@ input[type=radio] {
     margin-left: -0.5rem;
   }
 
-  .nav-main-list a:first-child {
+  .nav-main-list li:first-child {
     flex: 1 1 36%;
     border-radius: 20px;
   }
 
-  .nav-main-list a:last-child {
+  .nav-main-list li:last-child {
     border-radius: 20px;
   }
 
-  .nav-main-list a {
+  .nav-main-list li {
     margin: 0.5rem;
     border: 1px solid #D9D9D9;
     border-radius: 20px;
@@ -2187,7 +2196,8 @@ input[type=radio] {
 }
 
 @media screen and (max-width: 720px) {
-  h6.h6 {
+  h6,
+  .h6 {
     font-size: 14px;
   }
 
@@ -2501,7 +2511,8 @@ input[type=radio] {
 }
 
 @media screen and (max-width: 450px) {
-  h6.h6 {
+  h6,
+  .h6 {
     font-size: 12px;
   }
 
